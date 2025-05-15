@@ -13,7 +13,7 @@ const salt = "34908a8c8f4b70c544976eb3bd889597";
 const secretKey = 'yourSecretKey'
 const app = express();
 
-mongoose.connect("mongodb://localhost:27017/grading-system")
+mongoose.connect("mongodb+srv://kabirahmad985:bCDu9GWT6mF2nML3@grading-legacy.bojjjtq.mongodb.net/grading_system?retryWrites=true&w=majority&appName=Grading-Legacy")
     .then(() => {
         console.log("mongodb connected");
     })
