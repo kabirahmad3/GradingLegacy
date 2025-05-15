@@ -24,7 +24,7 @@ mongoose.connect("mongodb+srv://kabirahmad985:bCDu9GWT6mF2nML3@grading-legacy.bo
 
 app.use(express.json());
 
-app.use(cors({origin:"*"}))
+app.use(cors({origin:"*",credentials: true}))
 
 app.post("/signup", async (req, res, next) => {
     const { body: { name, role, username, password, leader , head } = {} } = req;
