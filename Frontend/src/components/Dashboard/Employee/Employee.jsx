@@ -5,7 +5,6 @@ import Card from '../../Card';
 import { UserContext } from '../../../ContextApi';
 import Login from '../../Login';
 import { isCookie, useNavigate } from 'react-router';
-import cookieParser from 'cookie-parser';
 
 
 
