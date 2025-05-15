@@ -21,10 +21,12 @@ mongoose.connect("mongodb+srv://kabirahmad985:bCDu9GWT6mF2nML3@grading-legacy.bo
         console.log("mongodb connected");
     })
     .catch(console.error);
+    
+app.use(cors({origin:"*",credentials: true}))
+
 
 app.use(express.json());
 
-app.use(cors({origin:"*",credentials: true}))
 
 app.post("/signup", async (req, res, next) => {
     const { body: { name, role, username, password, leader , head } = {} } = req;
@@ -69,7 +71,9 @@ app.post("/login", async (req, res, next) => {
     res
         .cookie("ACTIVE_USER", token, {
             maxAge: 1000 * 60 * 60,
-            httpOnly: true
+            httpOnly: true,
+            sameSite: 'none',
+            secure: true 
         })
         .send({
             _id: user._id,
