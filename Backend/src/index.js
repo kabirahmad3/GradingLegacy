@@ -6,7 +6,7 @@ import mongoose from "mongoose";
 import _ from "lodash";
 import cookieParser from 'cookie-parser';
 import { Forms } from "./models/forms.js";
-import cors from cors;
+import cors from "cors";
 
 
 
