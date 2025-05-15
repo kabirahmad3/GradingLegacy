@@ -1,0 +1,287 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+  }
+  
+  .body {
+    min-height: 100vh;
+    overflow: hidden;
+    background: linear-gradient(to bottom right, #1160e8, #0ea5e9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .container {
+    display: flex;
+    min-height: 80vh;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 2rem;
+  }
+  
+  /* Left Panel - Blue area */
+  .left-panel {
+    background-color: rgba(17, 96, 232, 0.9);
+    color: white;
+    flex: 1.2; /* Slightly wider than the right panel */
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 20px 0 0 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  .branding {
+    margin-bottom: 2rem;
+  }
+  
+  .branding h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+  }
+  
+  .branding p {
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #e0edff;
+    margin-bottom: 2.5rem;
+  }
+  
+  .features {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+  }
+  
+  .feature-item {
+    display: flex;
+    align-items: flex-start;
+  }
+  
+  .feature-icon {
+    background-color: rgba(255, 255, 255, 0.15);
+    border-radius: 9999px;
+    padding: 0.5rem;
+    margin-right: 1rem;
+    width: 2.5rem;
+    height: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .feature-icon svg {
+    width: 1.25rem;
+    height: 1.25rem;
+    color: white;
+  }
+  
+  .feature-text h3 {
+    font-size: 1.125rem;
+    font-weight: 500;
+    margin-bottom: 0.25rem;
+  }
+  
+  .feature-text p {
+    font-size: 0.875rem;
+    color: #e0edff;
+    line-height: 1.4;
+  }
+  
+  /* Right Panel - White form area */
+  .right-panel {
+    flex: 0.8; /* Narrower than the left panel */
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 3rem 2rem;
+    border-radius: 0 20px 20px 0;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  .login-form {
+    width: 100%;
+    max-width: 350px; /* Adjusted for narrower right panel */
+  }
+  
+  .login-form h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    text-align: center;
+    color: #1f2937;
+  }
+  
+  .error-message {
+    margin-bottom: 1.5rem;
+    padding: 0.75rem;
+    background-color: #fee2e2;
+    border: 1px solid #fecaca;
+    color: #b91c1c;
+    border-radius: 0.375rem;
+    font-size: 0.875rem;
+  }
+  
+  .form-group {
+    margin-bottom: 1.5rem;
+  }
+  
+  .form-group label {
+    display: block;
+    font-size: 0.875rem;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+    color: #4b5563;
+  }
+  
+  .form-group input {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border: 1px solid #d1d5db;
+    border-radius: 0.375rem;
+    font-size: 1rem;
+    color: #111827;
+    transition: all 0.15s ease;
+  }
+  
+  .form-group input:focus {
+    outline: none;
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+  }
+  .form-group {
+  margin-bottom: 1rem;
+}
+
+.form-group label {
+  display: block;
+  font-size: 0.875rem;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  color: #555;
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: 0.625rem 0.75rem;
+  font-size: 0.875rem;
+  border: 1px solid #ddd;
+  border-radius: 0.375rem;
+  background-color: white;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  outline: none;
+  border-color: #4285f4;
+  box-shadow: 0 0 0 2px rgba(66, 133, 244, 0.2);
+}
+  
+  .sign-in-button {
+    width: 100%;
+    background-color: #1160e8;
+    color: white;
+    border: none;
+    border-radius: 0.375rem;
+    padding: 0.75rem;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    margin-bottom: 1.5rem;
+  }
+  
+  .sign-in-button:hover {
+    background-color: #0d4ecc;
+  }
+  
+  .sign-in-button:disabled {
+    background-color: #93c5fd;
+    cursor: not-allowed;
+  }
+  
+  .demo-credentials {
+    text-align: center;
+    font-size: 0.75rem;
+    max-width: 85%;
+    margin: 0 auto;
+  }
+  
+  .demo-title {
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: #4b5563;
+    margin-bottom: 0.5rem;
+  }
+  
+  .credential-list {
+    font-size: 0.7rem;
+    color: #6b7280;
+    display: flex;
+    flex-direction: column;
+    gap: 0.15rem;
+  }
+  
+  .password-note {
+    font-style: italic;
+    margin-top: 0.25rem;
+    color: #9ca3af;
+    font-size: 0.65rem;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .container {
+      flex-direction: column;
+      padding: 1rem;
+    }
+    
+    .left-panel {
+      border-radius: 20px 20px 0 0;
+      padding: 2rem;
+    }
+    
+    .right-panel {
+      border-radius: 0 0 20px 20px;
+      padding: 2rem;
+    }
+  }
+    .hidden {
+      display: none;
+    }
+    .btn {
+      width: 100%;
+      background-color: #1160e8;
+      color: white;
+      border: none;
+      border-radius: 0.375rem;
+      padding: 0.75rem;
+      font-weight: 600;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background-color 0.2s;
+      margin-top: 1rem;
+    }
+    .btn:hover {
+      background-color: #0d4ecc;
+    }
+    .error {
+      font-size: 0.75rem;
+      color: #dc2626;
+    }
+    .change{
+    display: flex;
+    justify-content: center;
+  }
+  .a{
+    color: blue;
+    margin-left: 2px;
+    cursor: pointer;
+  }

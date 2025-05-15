@@ -1,0 +1,219 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-color: #f5f7fa;
+    color: #333;
+    line-height: 1.6;
+    /* padding: 20px; */
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.back-button {
+    display: flex;
+    align-items: center;
+    color: #3b82f6;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.employee-info {
+    font-weight: 500;
+    color: #64748b;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.assessment-card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    margin-bottom: 20px;
+}
+
+.assessment-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.assessment-title h1 {
+    font-size: 24px;
+    color: #1e293b;
+}
+
+.draft-badge {
+    background-color: #e2e8f0;
+    color: #64748b;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 14px;
+}
+
+.progress-container {
+    margin-bottom: 20px;
+}
+
+.progress-text {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+.progress-bar {
+    height: 8px;
+    background-color: #e2e8f0;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.progress-fill {
+    height: 100%;
+    width: 0%;
+    background-color: #1e293b;
+}
+
+.instructions {
+    margin-top: 20px;
+    color: #64748b;
+}
+
+.category-title {
+    font-size: 20px;
+    color: #1e293b;
+    margin-bottom: 10px;
+}
+
+.category-description {
+    color: #64748b;
+    margin-bottom: 20px;
+}
+
+.rating-question {
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+
+.rating-scale {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px 0;
+    position: relative;
+}
+
+.rating-line {
+    position: absolute;
+    height: 5px;
+    background-color: #cbd5e1;
+    width: 100%;
+    top: 9%;
+    z-index: 1;
+}
+
+.rating-fill-line {
+    height: 100%;
+    background-color: black;
+    width: 0%;
+    transition: width 0.3s ease;
+}
+
+.rating-points {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    position: relative;
+    z-index: 2;
+}
+
+.rating-point {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+}
+
+.point-circle {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: #e2e8f0;
+    /* border: 2px solid white; */
+    margin-bottom: 10px;
+}
+
+
+.point-circle.active,.point-circle.filled {
+    background-color: black;
+}
+
+
+.point-value {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.point-label {
+    font-size: 12px;
+    color: #64748b;
+    text-align: center;
+}
+
+.supporting-examples {
+    margin-top: 20px;
+}
+
+.examples-label {
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+textarea {
+    width: 100%;
+    min-height: 120px;
+    padding: 12px;
+    border: 1px solid #cbd5e1;
+    border-radius: 5px;
+    resize: vertical;
+    font-size: 14px;
+}
+
+.save-button {
+    background-color: #3b82f6;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    float: right;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.save-button:hover {
+    background-color: #2563eb;
+}
+
+.save-icon {
+    width: 16px;
+    height: 16px;
+}
