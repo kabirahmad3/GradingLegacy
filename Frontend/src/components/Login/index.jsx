@@ -3,6 +3,9 @@ import appstyle from "./login.module.css";
 import { useContext, useState } from "react";
 import { useNavigate } from "react-router";
 import { UserContext } from "../../ContextApi";
+const { VITE_API_URL="" }=import.meta.env; 
+
+
 
 function Login() {
   const [email, setEmail] = useState("");
@@ -25,9 +28,14 @@ function Login() {
     setErrorMessage("");
     setIsSubmitting(true);
 
-    axios.post("/api/login", {
+    axios.post(`${VITE_API_URL}/api/login`, {
       username: email,
       password
+    },{
+      withCredentials: true,
+      headers:{
+        'Access-Control-Allow-Origin':"*"
+      }
     })
       .then(({ data }) => {
         // localStorage.setItem("user", JSON.stringify(data));

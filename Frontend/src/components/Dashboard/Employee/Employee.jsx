@@ -5,6 +5,7 @@ import Card from '../../Card';
 import { UserContext } from '../../../ContextApi';
 import Login from '../../Login';
 import { isCookie, useNavigate } from 'react-router';
+const { VITE_API_URL="" } = import.meta.env;
 
 
 
@@ -26,7 +27,7 @@ function Employee() {
     setCycleOptions(['All Cycles', 'Q1 2025', 'Q2 2025', 'Q3 2025', 'Q4 2025']);
     // console.log('Employee Dashboard loaded');
 
-    axios.get("/api/get-form")
+    axios.get(`${VITE_API_URL}/api/get-form`)
       .then(({data}) => {
         setForms(data)
       })
