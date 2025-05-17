@@ -22,7 +22,7 @@ mongoose.connect("mongodb+srv://kabirahmad985:bCDu9GWT6mF2nML3@grading-legacy.bo
     })
     .catch(console.error);
     
-app.use(cors({origin:"https://grading-legacy.vercel.app",credentials: true}));
+app.use(cors({origin:"https://gradinglegacy.onrender.com",credentials: true}));
 
 
 app.use(express.json());

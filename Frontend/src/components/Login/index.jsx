@@ -34,11 +34,11 @@ function Login() {
     },{
       withCredentials: true,
       headers:{
-        'Access-Control-Allow-Origin':"*"
+        'Access-Control-Allow-Origin':"*",
       }
     })
       .then(({ data }) => {
-        // localStorage.setItem("user", JSON.stringify(data));
+        localStorage.setItem("user", JSON.stringify(data));
         setUser(data);
         navigate("/");
       })
