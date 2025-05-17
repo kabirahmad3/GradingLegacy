@@ -68,14 +68,13 @@ app.post("/login", async (req, res, next) => {
     const options = { expiresIn: '1h' }; // Token expiration time
 
     const token = jwt.sign(payload, secretKey, options);
-    res
-        .cookie("ACTIVE_USER", token, {
+    res.cookie("ACTIVE_USER", token, {
             maxAge: 1000 * 60 * 60,
             httpOnly: true,
             sameSite: 'none',
             secure: true 
         })
-        .send({
+    res.send({
             _id: user._id,
             role: user.role,
             name: user.name,
